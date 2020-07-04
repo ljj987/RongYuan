@@ -1,0 +1,266 @@
+Maya常用快捷键
+一、主用户界面快捷键
+
+主用户界面命令 快捷键 
+Numeric Expression Evaluator（数字表达式求值）注：在用快捷键激活此命令之前，光标一定要在数字输入框中，这样才可以调出数字表达式求值窗口，且此快捷键不可以自定义。 CTRL+N 
+Adaptive Degradation Toggle（显示自适应标记开关） O（字母） 
+Lock User Interface Toggle（锁定用户界面开关） ALT+0（数字） 
+Align（对齐） ALT+A 
+Normal Align（法线对齐） ALT+N 
+Place Highlight（放置高光） CTRL+H 
+Spacing Tool（间距工具） SHIFT+I 
+Angle Snap Toggle（角度捕捉开关） A 
+Snap Percent Toggle（百分比捕捉开关） SHIFT+CTRL+P 
+Snap Toggle（捕捉开关） S 
+Snaps Cycle（循环捕捉） ALT+S 
+Animate Mode ToggleAuto Key Toggle（自动添加关键帧动画模式开关） N 
+Go to End Frame（到结束帧） END 
+Go to Start Frame（到开始帧） HOME 
+Backup Time One Unit（向前移动一帧） ， 
+Forward Time One Unit（向后移动一帧） . 
+Set Key Mode（设置关键帧模式） ' 
+Set Key（设置关键帧） K 
+Play Animation（播放动画） / 
+Sound Toggle（声音开关） \ 
+Background Lock Toggle（背景锁定开关） ALT+CTRL+B 
+Bottom View（底视图） B 
+Camera View（摄影机视图） C 
+Front View（前视图） F 
+Left View（左视图） L 
+Disable Viewport（非活动视图） D 
+Isometric User View（用户视图） U 
+Perspective User View（透视图） P 
+Top View（顶视图） T 
+Spot/Directional Light View（聚光灯/平行光灯视图） SHIFT+4 
+Delete Objects（删除物体） DELETE 
+Open File（打开文件） CTRL+O（字母） 
+New Scene（新建场景） CTRL+N 
+Save File（存储文件） CTRL+S 
+Hold（暂存） ALT+CTRL+H 
+Fetch（恢复至最后一次暂存状态） ALT+CTRL+F 
+Expert Mode（专家模式） CTRL+X 
+Undo Scene Operation（撤消场景操作） CTRL+Z 
+Redo Scene Operation（重做场景操作） CTRL+Y 
+Smart Select（选择模式） Q 
+注：当选择按钮被激活后再按Q键为循环选择Fence Selection Region（围栏式选择区域）方式。 
+Cycle Selection Method（循环选择选择方式） CTRL+F 
+Move Mode（移动模式） M 
+Rotate Mode（旋转模式） E 
+Smart Scale（缩放模式） R 
+Scale Cycle（循环缩放模式） CTRL+E 
+Restrict to X（限制X轴向） F5 
+Restrict to Y（限制Y轴向） F6 
+Restrict to Z（限制Z轴向） F7 
+Restrict Plane Cycle（循环选择限制在XY，XZ，YZ平面） F8 
+Hide Cameras Toggle（隐藏摄影机开关） SHIFT+C 
+Hide Geometry Toggle（隐藏几何体开关） SHIFT+G 
+Hide Grids Toggle（隐藏网格开关） G 
+Hide Helpers Toggle（隐藏辅助物体开关） SHIFT+H 
+Hide Lights Toggle（隐藏光源开关） SHIFT+L 
+Hide Particle Systems Toggle（隐藏粒子系统开关） SHIFT+P 
+Hide Space Warps Toggle（隐藏空间变形开关） SHIFT+W 
+Select All（全选） CTRL+A 
+Select Ancestor（选择当前物体的父物体） PAGE UP 
+Select Child（选择当前物体的子物体） PAGE DOWN 
+Select Invert（反选） CTRL+I 
+Select None（取消选择） CTRL+D 
+Select-By-Name Dialog（通过名字选择对话框） H 
+Selection Lock Toggle（选择锁定开关） 空格键 
+Show Main Toolbar Toggle（显示主工具栏开关） ALT+6 
+Show Safeframes Toggle（显示安全框开关） SHIFT+F 
+Show Selection Bracket Toggle（显示选择框架开关） J 
+Show Tab Panel Toggle（显示标签栏开关） Y 
+Zoom Extents（将物体在当前视图最大化显示） ALT+CTRL+Z 
+Zoom Extents All（将物体在所有视图中最大化显示） SHIFT+CTRL+Z 
+Zoom Extents Selected All（将选择物体在所有视图中最大化显示） Z 
+Zoom Mode（缩放视图模式） ALT+Z 
+Zoom Region Mode（区域缩放模式） CTRL+W 
+Zoom Viewport In（放大视图） [ 
+Zoom Viewport Out（缩小视图） ] 
+Maximize Viewport Toggle（最大/最小化视图开关） ALT+W 
+Pan View（平移视图） CTRL+P 
+Pan Viewport（依照光标的位置平移视图） I 
+Undo Viewport Operation（撤消视图操作） SHIFT+Z 
+Redo Viewport Operation（重做视图操作） SHIFT+Y 
+Redraw All Views（重画所有视图） ` 
+Shade Selected Faces Toggle（着色选择面开关） F2 
+Wireframe / Smooth+Highlights Toggle（线框/光滑和高光开关） F3 
+View Edged Faces Toggle（视图边面显示开关） F4 
+See-Through Display Toggle（透空显示开关） ALT+X 
+Viewport Background（视图背景） ALT+B 
+Update Background Image（更新背景图象） ALT+SHIFT+CTRL+B 
+Match Camera To View（匹配摄影机到视图） CTRL+C 
+MAXScript Listener（脚本记录器） F11 
+Material Editor（材质编辑器） M 
+Isolate Selection（Isolate选择模式） ALT+Q 
+Environment Dialog（环境对话框） 8 
+Default Lighting Toggle（默认光源开关） CTRL+L 
+Sub-object Level 1（子物体层级1） 1 
+Sub-object Level 2（子物体层级2） 2 
+Sub-object Level 3（子物体层级3） 3 
+Sub-object Level 4（子物体层级4） 4 
+Sub-object Level 5（子物体层级5） 5 
+Sub-object Level Cycle（循环子物体各层级） INSERT 
+Sub-object Selection Toggle（子物体选择开关） CTRL+B 
+Quick Render（快速渲染） SHIFT+Q 
+Render Last（按上一次设置渲染） F9 
+Render Scene（渲染场景） F10 
+Render To Texture（渲染为纹理贴图） 0（数字） 
+Transform Gizmo Size Down（放大变换Gizmo尺寸） = 
+Transform Gizmo Size Up（缩小变换Gizmo尺寸） - 
+Transform Gizmo Toggle（变换Gizmo开关） X 
+Transform Type-In Dialog（输入变换对话框） F12 
+Virtual Viewport Pan Down（向下平移虚拟视图） 2（数字键盘） 
+Virtual Viewport Pan Left（向左平移虚拟视图） 4（数字键盘） 
+Virtual Viewport Pan Right（向右平移虚拟视图） 6（数字键盘） 
+Virtual Viewport Pan Up（向上平移虚拟视图） 8（数字键盘） 
+Virtual Viewport Toggle（虚拟视图开关） /（数字键盘） 
+Virtual Viewport Zoom In（放大虚拟视图） +（数字键盘） 
+Virtual Viewport Zoom Out（缩小虚拟视图） -（数字键盘） 
+Polygon Counter（多边形统计） 7 
+Offset Snap（偏移锁定） ALT+CTRL+空格键 
+二、轨迹视图功能命令快捷键
+
+轨迹视图主要用来设置和调节动画效果,动画效果的调节是一件很繁杂的事情,所以对于制作动画的朋友来说,合理的运用轨迹视图中的快捷键一定可以使你的调节工作增速不少。注:在使用轨迹视图快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。 
+轨迹视图功能（Track View Function）命令 快捷键 
+Add Keys（添加关键帧） A 
+Apply Ease Curve（指定松弛曲线） CTRL+E 
+Apply Multiplier Curve（指定倍增曲线） CTRL+M 
+Assign Controller（赋给控制器） C 
+Copy Controller（复制控制器） CTRL+C 
+Edit Keys Mode（编辑关键帧模式） E 
+Expand Object Toggle（扩展物体开关） O (字母) 
+Expand Track Toggle（扩展轨迹开关） ENTER, T 
+Filters（启动过滤器） Q 
+Function Curves Mode（功能曲线模式） F5, F 
+Lock Selection（锁定选择） 空格键 
+Lock Tangents Toggle（锁定切线开关） L 
+Make Controller Unique（使控制器唯一） U 
+Move Highlight Down（向下移动高光显示） 下方向键 
+Move Highlight Up（向上移动高光显示） 上方向键 
+Move Keys（移动关键帧） M 
+Nudge Keys Left（将关键帧向左移动一帧） 左方向键 
+Nudge Keys Right（将关键帧向右移动一帧） 右方向键 
+Pan（平移） P 
+Paste Controller（粘贴控制器） CTRL+V 
+Scroll Down（滚动条向下滚动） CTRL+下方向键 
+Scroll Up（滚动条向上滚动） CTRL+上方向键 
+Snap Frames（捕捉帧） S 
+Zoom（缩放） Z 
+Zoom Horizontal Extents（水平方向缩放） ALT+X 
+三、材质编辑器快捷键
+
+材质编辑器是用来创建和编辑物体的材质的窗口。注:在使用材质编辑器快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。 
+材质编辑器功能（Material Editor Function）命令 快捷键 
+Background（材质的背景） B 
+Backlight（材质的背光） L 
+Cycle 3X2, 5X3, 6X4 Sample Slots（循环显示3X2, 5X3, 6X4样本示例窗） X 
+Get Material（得到材质） G 
+Go Backward to Sibling（切换到前一个贴图） 左方向键 
+Go Forward to Sibling（切换到后一个贴图） 右方向键 
+Go to Parent（回到父层级） 上方向键 
+Make Preview（制作预览） P 
+Options（选项） O 
+四、实时渲染窗口的快捷键
+
+注:在使用实时渲染窗口的快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。实时渲染窗口的快捷键如下: 
+实时渲染功能（ActiveShade Function）命令 快捷键
+
+Close（关闭窗口） Q 
+Draw Region（画出渲染范围） D 
+Render（渲染） R 
+Select Object（选择物体） S 
+六、Video Post窗口的快捷键
+
+Video Post窗口主要用来处理特效和动画特技效果。 
+注:在使用Video Post窗口的快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。 
+Video Post窗口功能命令 快捷键 
+Add Image Filter Event（加入图象特效事件） CTRL+F 
+Add Image Input Event（加入图象输入事件） CTRL+I 
+Add Image Layer Event（加入图象层事件） CTRL+L 
+Add Image Output Event（加入图象输出事件） CTRL+O (字母) 
+Add New Event（加入新的事件） CTRL+A 
+Add Scene Event（加入场景事件） CTRL+S 
+Edit Current Event（加入当前事件） CTRL+E 
+Execute Sequence（执行序列） CTRL+R 
+New Sequence（新建序列） CTRL+N 
+七、NURBS建模快捷键 
+注:在使用NURBS功能命令的快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。 
+NURBS功能命令 快捷键
+
+CV Constrained Normal Move（将移动约束到CV曲面的法线方向上） ALT+N 
+CV Constrained U Move（将移动约束到CV曲面的U向） ALT+U 
+CV Constrained V Move（将移动约束到CV曲面的V向） ALT+V 
+Display Curves（显示曲线） SHIFT+CTRL+C 
+Display Dependents（显示从属网格） CTRL+D 
+Display Lattices（显示控制网格） CTRL+L 
+Display Shaded Lattice（显示阴影控制网格） ALT+L 
+Display Surfaces（显示面） SHIFT+CTRL+S 
+Display Toolbox（显示工具箱） CTRL+T 
+Display Trims（显示剪切） SHIFT+CTRL+T 
+Local Select Sub-Object by Name（通过名称选择自身的子层级） CTRL+H 
+Lock 2D Selection（锁定2D选择） 空格键 
+Select Next in U（选择U向上的下一个） CTRL+右方向键 
+Select Next in V（选择V向上的下一个） CTRL+上方向键 
+Select Previous in U（选择U向上的上一个） CTRL+左方向键 
+Select Previous in V（选择V向上的下一个） CTRL+下方向键 
+Select Sub-Object by Name（通过名称选择子物体） H 
+Set Tessellation Preset 1（设置低级面细分） ALT+1 
+Set Tessellation Preset 2（设置中级面细分） ALT+2 
+Set Tessellation Preset 3（设置高级面细分） ALT+3 
+Soft Selection（软选择） CTRL+S 
+Switch to Curve CV Level（转换到Curve CV层级） ALT+SHIFT+Z 
+Switch to Curve Level（转换到Curve 层级） ALT+SHIFT+C 
+Switch to Imports Level（转换到Imports层级） ALT+SHIFT+I 
+Switch to Point Level（转换到Point层级） ALT+SHIFT+P 
+Switch to Surface CV Level（转换到Surface CV层级） ALT+SHIFT+V 
+Switch to Surface Level（转换到Surface层级） ALT+SHIFT+S 
+Switch to Top (Object) Level（转换到上一层级） ALT+SHIFT+T 
+Transform Degrade（转换降级） CTRL+X 
+八、编辑网格命令快捷键
+
+注:在使用编辑网格功能命令的快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。 
+编辑网格功能（Edit/Editable Mesh Function）命令 快捷键
+
+Bevel Mode（倒角模式） CTRL+V或CTRL+B 
+Chamfer Mode（切角模式） CTRL+C 
+Cut Mode（切割模式） ALT+C 
+Detach（分离） CTRL+D 
+Edge Invisible（将边变为不可见） CTRL+I 
+Edge Level（边层级） 2 
+Edge Turn（反转边） CTRL+T 
+Element Level（元素层级） 5 
+Extrude Mode（挤出模式） CTRL+E 
+Face Level（三角面层级） 3 
+Polygon Level（多边形面层级） 4 
+Vertex Level（点层级） 1 
+Weld Selected（焊接选择） CTRL+W 
+Weld Target Mode（焊接目标点模式） ALT+W 
+九、编辑多边形命令快捷键
+
+编辑多边形在新版本中改进很大,功能更强。 
+注:在使用编辑多边形对象功能命令的快捷键之前,应先按下主工具栏中的Keyboard Shortcut Override Toggle(快捷键覆盖开关)按钮。 
+编辑多边形对象功能（Editable Poly Function）命令 快捷键
+
+Bevel Mode（倒角模式） SHIFT+CTRL+B 
+Border Level（边界层级） 3 
+Chamfer Mode（切角模式） SHIFT+CTRL+C 
+Connect（连接） SHIFT+CTRL+E 
+Constrain to Edges（约束到边） SHIFT+X 
+Cut（切割） ALT+C 
+Edge Level（边层级） 2 
+Element Level（元素层级） 5 
+Extrude Mode（挤出模式） SHIFT+E 
+Face Level（三角面层级） 4 
+Grow Selection（增长选择） CTRL+PageUp 
+Hide（隐藏） ALT+H 
+Hide Unselected（隐藏未选择的） ALT+I 
+Object Level（物体层级） 6 
+Quickslice Mode（快速剪切面模式） SHIFT+CTRL+Q 
+Repeat Last Operation（重复上一次操作） ; 
+Select Edge Loop（选择循环边） ALT+L 
+Select Edge Ring（选择环形边） ALT+R 
+Shrink Selection（缩小选择） CTRL+PageDown 
+Unhide All（显示全部） ALT+U 
+Vertex Level（点层级） 1 
+Weld Mode（焊接模式） SHIFT+CTRL+W 

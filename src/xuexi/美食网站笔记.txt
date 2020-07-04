@@ -1,0 +1,30 @@
+美食网站的制作
+制作步骤：
+1. 创建一个完整的网站目录结构：
+Meishi(文件夹)：管理网站所有的目录
+images(文件夹)：管理网站所有的图片
+css(文件夹)：管理网站所有的css文件
+js(文件夹)：管理网站所有的js文件
+index.html(文件)：当前网站入口文件
+2. 准备一张PSD（用于转换为HTML页面的设计图）
+3. 确定一种开发方式：
+a)从上到下的方式（新手）
+b)先确定结构再填充内容（老司机）
+4. css初始化（清除浏览器中标签的一些默认样式）：
+a)去掉标签的默认margin和padding：
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0}
+b)去掉图片的边框：
+img{border:0}
+c)去掉ul前面的小点：
+ul,ol{list-style:none}
+d)去掉input标签默认的padding-top，padding-bottom，border：
+input{padding-top:0;padding-bottom:0;border:none;}
+e)去掉a标签的下划线
+a{text-decoration:?none;}
+f)给body设置一个统一的字体样式和背景颜色：
+body{font:?normal?normal?12px?"宋体";color:?#4c4c4c; background-color: #fae8c8;}
+g)左右浮动，清除浮动：
+.fl {float: left;}.fr {float: right;}.clearfix:after { content: ""; height: 0; line-height: 0;display: block; visibility: hidden; clear: both;}.clearfix { zoom: 1;}
+5. 开始网站代码的书写：
+	1）完成网站所有的页面统一的头部和尾部：
+		temple.html----------------->temple.css

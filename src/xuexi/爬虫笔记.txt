@@ -1,0 +1,35 @@
+#爬虫构建IP代理池
+#爬虫的一般思路
+import requests #pip install requests
+import parsel
+#1、分析目标网页，确定爬取的url路径，headers参数
+base_url = 'https://www.kuaidaili.com/free/'
+headers = {User-Agent:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER}
+#2、发送请求--requests模拟浏览器获取响应的数据
+response = requests.get(base_url, headers=headers)
+#print(response.requests.headers)
+data = response.text
+#print(data)
+# ip格式（“协议类型”：“ip:端口”）
+#3、解析数据--parsel转化为selector对象（具有xpath）
+#转化数据类型
+html_data = parsel.Selector(data) 
+#数据解析
+parse_list = html_data.xpath('//table[@class="table table-bordered table-striped"]/tbody/tr')
+
+proxies_list = []
+#循环遍历
+for tr in parse_list:
+     dict_proxies = {}
+     http_type = tr.xpath('./td[4]/text()').extract_first()#协议类型
+     ip_num = tr.xpath('./td[1]/text()').extract_first()#ip
+     ip_port = tr.xpath('./td[2]/text()').extract_first()#端口
+     print(http_type, ip_num, ip_port)
+
+     #构建IP字典
+     dict_proxies[http_type] = ip_num + ':' + ip_port
+     print(dict_procies)
+     proxies_list.append(dict_proxies)     
+#4、保存数据
+print(proxies_list)
+print('获取的代理IP数量：',len(proxies_list))

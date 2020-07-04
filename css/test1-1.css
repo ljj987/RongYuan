@@ -1,8 +1,68 @@
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
 }
-
+  
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 5px;
+    background: #f1f1f1;
+}
+  /* 头部样式 */
+.header {
+    background-color: #f0f0f0;
+    padding: 15px;
+    text-align: center;
+}
+/* 导航条 */
+.topnav {
+    overflow: hidden;
+    background-color: #243B0C;
+}
+  
+  /* 导航链接 */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* 链接 - 修改颜色 */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* 底部 */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #f0f0f0;
+    margin-top: 5px;
+}
+   
+  /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+}
+   
+  /* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+}   
+.bgc {
+    width: 100%;
+}
 .home {
     height: 100%;
     overflow: hidden;
@@ -28,25 +88,32 @@ span {
     animation: fly 15s linear infinite;
     transform-style: preserve-3d;
 }
-.icon {
-    width: 15px;
-    height: 15px;
-    padding: 5px;
-    border: 2px solid #fff;
-    border-radius: 100%;
+.stars:before,
+.stars:after {
+    content: "";
     position: absolute;
-    left: 49%;
-    bottom: 50px;
-    animation: downs 2s linear infinite;
+    width: inherit;
+    height: inherit;
+    box-shadow: inherit;
 }
 
-@keyframes downs {
+.stars:before {
+    transform: translateZ(-300px);
+    opacity: .6;
+}
+
+.stars:after {
+    transform: translateZ(-600px);
+    opacity: .4;
+}
+
+@keyframes fly {
     from {
-        transform: translatey(0px);
+        transform: translateZ(0px);
         opacity: .6;
     }
     to {
-        transform: translatey(30px);
+        transform: translateZ(200px);
         opacity: .8;
     }
 }
@@ -77,76 +144,25 @@ span {
     font-size: 20px;
     font-weight: 500;
 }
-.ribbon {
-    display: flex;
-    justify-content: center;
+.icon {
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    border: 2px solid #fff;
+    border-radius: 100%;
     position: absolute;
-    right: 100px;
-    top: 30px;
-    margin: auto;
+    left: 49%;
+    bottom: 50px;
+    animation: downs 2s linear infinite;
 }
 
-.ribbon:after,
-.ribbon:before {
-    margin-top: 0.5em;
-    content: "";
-    display: flex;
-    border: 1.5em solid#73AD21;
-}
-
-.ribbon:after {
-    border-right-color: transparent;
-}
-
-.ribbon:before {
-    border-left-color: transparent;
-}
-
-.ribbon a:link,
-.ribbon a:visited {
-    color: #000;
-    text-decoration: none;
-    height: 3.5em;
-    overflow: hidden;
-}
-
-.ribbon span {
-    background: #E6A5B6;
-    display: inline-block;
-    line-height: 3em;
-    padding: 0 1.5em;
-    margin-top: 0.5em;
-    position: relative;
-    -webkit-transition: background-color 0.2s, margin-top 0.2s;
-    /* Saf3.2+, Chrome */
-    -moz-transition: background-color 0.2s, margin-top 0.2s;
-    /* FF4+ */
-    -ms-transition: background-color 0.2s, margin-top 0.2s;
-    /* IE10 */
-    -o-transition: background-color 0.2s, margin-top 0.2s;
-    /* Opera 10.5+ */
-    transition: background-color 0.2s, margin-top 0.2s;
-}
-
-.ribbon a:hover span {
-    background: #A00303;
-    margin-top: 0;
-}
-
-.ribbon span:before {
-    content: "";
-    position: absolute;
-    top: 5em;
-    left: 0;
-    border-right: 0.5em solid #9B8651;
-    border-bottom: 0.5em solid #fff;
-}
-
-.ribbon span:after {
-    content: "";
-    position: absolute;
-    top: 3em;
-    right: 0;
-    border-left: 0.5em solid #9B8651;
-    border-bottom: 0.5em solid #fff;
+@keyframes downs {
+    from {
+        transform: translateY(0px);
+        opacity: .6;
+    }
+    to {
+        transform: translateY(30px);
+        opacity: .8;
+    }
 }

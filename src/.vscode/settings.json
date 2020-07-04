@@ -1,0 +1,9 @@
+{
+    "terminal.integrated.shell.windows": "G:\\ruanjian\\git\\Git\\bin\\bash.exe",
+    "open-in-browser.default": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+    "view-in-browser.customBrowser": "chrome",
+    "liveServer.settings.useBrowserPreview": true,
+    "cSpell.words": [
+        "topna"
+    ],
+}

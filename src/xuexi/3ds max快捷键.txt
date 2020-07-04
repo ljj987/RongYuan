@@ -1,0 +1,310 @@
+3DSMAX命令中英文对照表及快捷键大全
+主界面
+快捷键            命令
+CTRL+X            Expert Mode（专家模式）
+T                 Top View（顶视图）
+B                 Bottom View（底视图）
+C                 Camera View（摄影机视图）
+F                 Front View（前视图）
+L                 Left View（左视图）
+D                 Disable Viewport（禁止活动视图）
+U                 Isometric User View（用户视图）
+P                 Perspective User View（透视图）
+SHIFT+4           Spot/Directional Light View（聚光灯/平行光灯视图）
+F5                Restrict to X（限制X轴向）
+F6                Restrict to Y（限制Y轴向）
+F7                Restrict to Z（限制Z轴向）
+F8                Restrict Plane Cycle（循环选择限制在XY，XZ，YZ平面）
+Q                 Smart Select（选择模式）
+注：当选择按钮被激活后再按Q键为循环选择
+CTRL+F            Cycle Selection Method（循环选择选择方式）
+H                 Select-By-Name Dialog（通过名字选择对话框）
+CTRL+A            Select All（全选）
+PAGE UP           Select Ancestor（选择当前物体的父物体）
+PAGE DOWN         Select Child（选择当前物体的子物体） 
+CTRL+I            Select Invert（反选）
+CTRL+D            Select None（取消选择）
+W                 Move Mode（移动模式）
+E                 Rotate Mode（旋转模式）
+R                 Smart Scale（缩放模式）
+CTRL+E            Scale Cycle（循环缩放模式）
+A                 Angle Snap Toggle（角度捕捉开关）
+SHIFT+CTRL+P      Snap Percent Toggle（百分比捕捉开关）
+S                 Snap Toggle（捕捉开关）
+ALT+S             Snaps Cycle（循环捕捉）
+空格键            Selection Lock Toggle（选择锁定开关）
+G                 Hide Grids Toggle（隐藏网格开关）
+ALT+A             Align（对齐）
+ALT+N             Normal Align（法线对齐）
+N                 User Pivot Point Center切换自动关键点模式
+CTRL+N            Numeric Expression Evaluator（数字表达式求值） 
+O（字母）         Adaptive Degradation Toggle（显示自适应标记开关）
+ALT+0（数字）     Lock User Interface Toggle（锁定用户界面开关）
+CTRL+H            Place Highlight（放置高光）
+SHIFT+I           Spacing Tool（间距工具）
+N                 Animate Mode ToggleAuto Key Toggle（自动添加关键帧动画模式开关）
+END               Go to End Frame（到结束帧）
+HOME              Go to Start Frame（到开始帧）
+，                Backup Time One Unit（向前移动一帧）
+.                 Forward Time One Unit（向后移动一帧）
+'                 Set Key Mode（设置关键帧模式）
+K                 Set Key（设置关键帧）
+/                 Play Animation（播放动画）
+\                 Sound Toggle（声音开关）
+ALT+CTRL+B        Background Lock Toggle（背景锁定开关） 
+CTRL+Z            Undo Scene Operation（撤消场景操作）
+CTRL+Y            Redo Scene Operation（重做场景操作）
+SHIFT+C           Hide Cameras Toggle（隐藏摄影机开关）
+SHIFT+G           Hide Geometry Toggle（隐藏几何体开关）
+SHIFT+H           Hide Helpers Toggle（隐藏辅助物体开关）
+SHIFT+L           Hide Lights Toggle（隐藏光源开关）
+SHIFT+P           Hide Particle Systems Toggle（隐藏粒子系统开关） 
+SHIFT+W           Hide Space Warps Toggle（隐藏空间变形开关）
+ALT+6             Show Main Toolbar Toggle（显示主工具栏开关）
+SHIFT+F           Show Safeframes Toggle（显示安全框开关）
+J                 Show Selection Bracket Toggle（显示选择框架开关）
+Y                 Show Tab Panel Toggle（显示标签栏开关）
+ALT+CTRL+Z        Zoom Extents（将物体在当前视图最大化显示）
+SHIFT+CTRL+Z      Zoom Extents All（将物体在所有视图中最大化显示）
+Z                 Zoom Extents Selected All（将选择物体在所有视图中最大化显示）
+ALT+Z             Zoom Mode（缩放视图模式）
+CTRL+W            Zoom Region Mode（区域缩放模式）
+[                 Zoom Viewport In（放大视图）
+]                 Zoom Viewport Out（缩小视图）
+ALT+W             Maximize Viewport Toggle（最大/最小化视图开关）
+CTRL+P            Pan View（平移视图） 
+I                 Pan Viewport（依照光标的位置平移视图）
+SHIFT+Z           Undo Viewport Operation（撤消视图操作）
+SHIFT+Y           Redo Viewport Operation（重做视图操作） 
+`                 Redraw All Views（重画所有视图）
+F2                Shade Selected Faces Toggle（着色选择面开关） 
+F3                Wireframe / Smooth+Highlights Toggle（线框/光滑和高光开关）
+F4                View Edged Faces Toggle（视图边面显示开关）
+ALT+X             See-Through Display Toggle（透空显示开关） 
+ALT+B             Viewport Background（视图背景）
+ALT+SHIFT+CTRL+B  Update Background Image（更新背景图象）
+CTRL+C            Match Camera To View（匹配摄影机到视图）
+F11               MAXScript Listener（脚本记录器）
+M                 Material Editor（材质编辑器）
+ALT+Q             Isolate Selection（Isolate选择模式）
+8                 Environment Dialog（环境对话框）
+CTRL+L            Default Lighting Toggle（默认光源开关）
+1                 Sub-object Level 1（子物体层级1）
+2                 Sub-object Level 2（子物体层级2） 
+3                 Sub-object Level 3（子物体层级3）
+4                 Sub-object Level 4（子物体层级4）
+5                 Sub-object Level 5（子物体层级5）
+INSERT            Sub-object Level Cycle（循环子物体各层级） 
+CTRL+B            Sub-object Selection Toggle（子物体选择开关）
+SHIFT+Q           Quick Render（快速渲染）
+F9                Render Last（按上一次设置渲染） 
+F10               Render Scene（渲染场景）
+0（数字）         Render To Texture（渲染为纹理贴图）
+=                 Transform Gizmo Size Down（放大变换Gizmo尺寸）
+-                 Transform Gizmo Size Up（缩小变换Gizmo尺寸）
+X                 Transform Gizmo Toggle（变换Gizmo开关）
+F12               Transform Type-In Dialog（输入变换对话框）
+2（数字键盘）     Virtual Viewport Pan Down（向下平移虚拟视图）
+4（数字键盘）     Virtual Viewport Pan Left（向左平移虚拟视图）
+6（数字键盘）     Virtual Viewport Pan Right（向右平移虚拟视图）
+8（数字键盘）     Virtual Viewport Pan Up（向上平移虚拟视图）
+/（数字键盘）     Virtual Viewport Toggle（虚拟视图开关）
++（数字键盘）     Virtual Viewport Zoom In（放大虚拟视图）
+-（数字键盘）     Virtual Viewport Zoom Out（缩小虚拟视图）
+7                 Polygon Counter（多边形统计）
+ALT+CTRL+空格键   Offset Snap（偏移锁定）
+
+轨迹视图功能（Track View Function）
+快捷键            命令
+A                 Add Keys（添加关键帧）
+CTRL+E            Apply Ease Curve（指定松弛曲线）
+CTRL+M            Apply Multiplier Curve（指定倍增曲线）
+C                 Assign Controller（赋给控制器）
+CTRL+C            Copy Controller（复制控制器）
+E                 Edit Keys Mode（编辑关键帧模式）
+O (字母)          Expand Object Toggle（扩展物体开关）
+ENTER, T          Expand Track Toggle（扩展轨迹开关）
+Q                 Filters（启动过滤器）
+F5, F             Function Curves Mode（功能曲线模式）
+空格键            Lock Selection（锁定选择）
+L                 Lock Tangents Toggle（锁定切线开关）
+U                 Make Controller Unique（使控制器唯一）
+下方向键          Move Highlight Down（向下移动高光显示）
+上方向键          Move Highlight Up（向上移动高光显示）
+M                 Move Keys（移动关键帧）
+左方向键          Nudge Keys Left（将关键帧向左移动一帧）
+右方向键          Nudge Keys Right（将关键帧向右移动一帧）
+P                 Pan（平移）
+CTRL+V            Paste Controller（粘贴控制器）
+CTRL+下方向键     Scroll Down（滚动条向下滚动）
+CTRL+上方向键     Scroll Up（滚动条向上滚动）
+S                 Snap Frames（捕捉帧）
+Z                 Zoom（缩放） 
+ALT+X             Zoom Horizontal Extents（水平方向缩放）
+
+材质编辑器功能（Material Editor Function）
+快捷键            命令
+B                 Background（材质的背景）
+L                 Backlight（材质的背光） 
+X                 Cycle 3X2, 5X3, 6X4 Sample Slots（循环显示3X2, 5X3, 6X4样本示例窗）
+G                 Get Material（得到材质）
+左方向键          Go Backward to Sibling（切换到前一个贴图）
+右方向键          Go Forward to Sibling（切换到后一个贴图）
+上方向键          Go to Parent（回到父层级）
+P                 Make Preview（制作预览） 
+O                 Options（选项）
+
+实时渲染功能（ActiveShade Function）
+快捷键            命令
+Q                 Close（关闭窗口）
+D                 Draw Region（画出渲染范围）
+R                 Render（渲染）
+S                 Select Object（选择物体）
+
+Video Post窗口功能 
+快捷键            命令
+CTRL+F            Add Image Filter Event（加入图象特效事件） 
+CTRL+I            Add Image Input Event（加入图象输入事件）
+CTRL+L            Add Image Layer Event（加入图象层事件）
+CTRL+O (字母)     Add Image Output Event（加入图象输出事件）
+CTRL+A            Add New Event（加入新的事件）
+CTRL+S            Add Scene Event（加入场景事件） 
+CTRL+E            Edit Current Event（加入当前事件）
+CTRL+R            Execute Sequence（执行序列）
+CTRL+N            New Sequence（新建序列）
+
+NURBS功能 
+快捷键            命令
+ALT+N             CV Constrained Normal Move（将移动约束到CV曲面的法线方向上）
+ALT+U             CV Constrained U Move（将移动约束到CV曲面的U向）
+ALT+V             CV Constrained V Move（将移动约束到CV曲面的V向）
+SHIFT+CTRL+C      Display Curves（显示曲线）
+CTRL+D            Display Dependents（显示从属网格）
+CTRL+L            Display Lattices（显示控制网格）
+ALT+L             Display Shaded Lattice（显示阴影控制网格）
+SHIFT+CTRL+S      Display Surfaces（显示面）
+CTRL+T            Display Toolbox（显示工具箱）
+SHIFT+CTRL+T      Display Trims（显示剪切）
+CTRL+H            Local Select Sub-Object by Name（通过名称选择自身的子层级）
+空格键            Lock 2D Selection（锁定2D选择）
+CTRL+右方向键     Select Next in U（选择U向上的下一个）
+CTRL+上方向键     Select Next in V（选择V向上的下一个）
+CTRL+左方向键     Select Previous in U（选择U向上的上一个）
+CTRL+下方向键     Select Previous in V（选择V向上的下一个）
+H                 Select Sub-Object by Name（通过名称选择子物体）
+ALT+1             Set Tessellation Preset 1（设置低级面细分）
+ALT+2             Set Tessellation Preset 2（设置中级面细分）
+ALT+3             Set Tessellation Preset 3（设置高级面细分）
+CTRL+S            Soft Selection（软选择）
+ALT+SHIFT+Z       Switch to Curve CV Level（转换到Curve CV层级）
+ALT+SHIFT+C       Switch to Curve Level（转换到Curve 层级）
+ALT+SHIFT+I       Switch to Imports Level（转换到Imports层级）
+ALT+SHIFT+P       Switch to Point Level（转换到Point层级）
+ALT+SHIFT+V       Switch to Surface CV Level（转换到Surface CV层级）
+ALT+SHIFT+S       Switch to Surface Level（转换到Surface层级）
+ALT+SHIFT+T       Switch to Top (Object) Level（转换到上一层级）
+CTRL+X            Transform Degrade（转换降级）
+ 
+编辑网格功能（Edit/Editable Mesh Function）
+快捷键            命令
+CTRL+V或CTRL+B   Bevel Mode（倒角模式）
+CTRL+C            Chamfer Mode（切角模式）
+ALT+C             Cut Mode（切割模式） 
+CTRL+D            Detach（分离）
+CTRL+I            Edge Invisible（将边变为不可见） 
+2                 Edge Level（边层级）
+CTRL+T            Edge Turn（反转边）
+5                 Element Level（元素层级）
+CTRL+E            Extrude Mode（挤出模式）
+3                 Face Level（三角面层级）
+4                 Polygon Level（多边形面层级）
+1                 Vertex Level（点层级）
+CTRL+W            Weld Selected（焊接选择）
+ALT+W             Weld Target Mode（焊接目标点模式）
+
+编辑多边形对象功能（Editable Poly Function） 
+快捷键            命令
+SHIFT+CTRL+B      Bevel Mode（倒角模式）
+3                 Border Level（边界层级）
+SHIFT+CTRL+C      Chamfer Mode（切角模式）
+SHIFT+CTRL+E      Connect（连接）
+SHIFT+X           Constrain to Edges（约束到边）
+ALT+C             Cut（切割）
+2                 Edge Level（边层级）
+5                 Element Level（元素层级）
+SHIFT+E           Extrude Mode（挤出模式） 
+4                 Face Level（三角面层级）
+CTRL+PageUp       Grow Selection（增长选择）
+ALT+H             Hide（隐藏）
+ALT+I             Hide Unselected（隐藏未选择的）
+6                 Object Level（物体层级）
+SHIFT+CTRL+Q      Quickslice Mode（快速剪切面模式）
+;                 Repeat Last Operation（重复上一次操作）
+ALT+L             Select Edge Loop（选择循环边）
+ALT+R             Select Edge Ring（选择环形边）
+CTRL+PageDown     Shrink Selection（缩小选择） 
+ALT+U             Unhide All（显示全部）
+1                 Vertex Level（点层级）
+SHIFT+CTRL+W      Weld Mode（焊接模式）
+快捷键            FFD Function（FFD功能命令）
+ALT+CTRL+C        Switch To Control Point Level（转换到控制点层级）
+ALT+CTRL+L        Switch To Lattice Level（转换到结构线层级）
+ALT+CTRL+S        Switch To Set Volume Level（转换到设置体层级）
+ALT+CTRL+T        Switch To Top Level（转换到顶层级）
+
+Unwrap UVW Function（编辑贴图坐标功能）
+快捷键            命令
+CTRL+B            Break Selected Vertices（打断选择的点）
+D或CTRL+D        Detach Edge Vertices（分离）
+CTRL+E            Edit UVWs（编辑UVW）
+ALT+F             Filter Selected Faces（过滤选择的面）
+CTRL+F            Freeze Selected（冻结选择）
+ALT+SHIFT+CTRL+F  Get Face Selection From Stack（从堆栈中得到选择的面） 
+ALT+SHIFT+CTRL+P  Get Selection From Faces（从面中得到选集）
+CTRL+H            Hide Selected（隐藏选择）
+ALT+SHIFT+CTRL+L  Load UVW（载入UVW设置参数）
+SPACEBAR          Lock Selected Vertices（锁定选择的点）
+ALT+SHIFT+CTRL+N  Mirror Horizontal（水平镜像）
+ALT+SHIFT+CTRL+M  Mirror Vertical（垂直镜像）
+ALT+SHIFT+CTRL+J  Move Horizontal（水平移动）
+ALT+SHIFT+CTRL+K  Move Vertical（垂直移动）
+CTRL+P            Pan（平移视图）
+ENTER             Planar Map Faces/Patches（平面贴图面或面片） 
+CTRL+S            Snap（捕捉）
+-                 Texture Vertex Contract Selection（收缩选择纹理点）
+= 或 + (数字键盘) Texture Vertex Expand Selection（扩展选择纹理点）
+Q                 Texture Vertex Move Mode（移动纹理点） 
+CTRL+R            Texture Vertex Rotate Mode（旋转纹理点）
+CTRL+W            Texture Vertex Weld Selected（焊接选择的纹理点）
+CTRL+T            Texture Vertex Target Weld（焊接目标纹理点）
+CTRL+O (字母)     Unwrap Options（展开选项）
+CTRL+U            Update Map（更新贴图）
+Z                 Zoom（缩放工具）
+X                 Zoom Extents（缩放为最大化）
+ALT+CTRL+Z        Zoom Extents Selected（将选择的缩放为最大化）
+CTRL+X            Zoom Region（缩放区域）
+SHIFT+空格键      Zoom to Gizmo（缩放到Gizmo大小）
+
+Edit Normals Function（编辑法线功能）
+快捷键            命令
+B                 Break Normals（打断法线）
+CTRL+C            Copy Normal（复制法线）
+CTRL+3            Edge Level（边层级） 
+CTRL+4            Face Level（面层级）
+E                 Make Explicit（使直接）
+CTRL+1            Normal Level（法线层级）
+CTRL+0（数字）    Object Level（物体层级）
+CTRL+V            Paste Normal（粘贴法线） 
+R                 Reset Normals（重置法线）
+S                 Specify Normals（指定法线）
+U                 Unify Normals（统一法线）
+CTRL+2            Vertex Level（点层级）
+
+Reactor Controllers Function（反应控制器功能）
+快捷键            命令
+ALT+CTRL+C或C    Create Reaction（创建反应器）
+ALT+CTRL+D或D    Delete Reaction（删除反应器）
+ALT+CTRL+S或E    Edit State Toggle（编辑状态开关）
+CTRL+I            Set Max Influence（设置为最大影响） 
+ALT+I             Set Min Influence（设置为最小影响）
+ALT+CTRL+V或S    Set Reaction Value（设置反应数值）

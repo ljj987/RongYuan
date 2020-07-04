@@ -1,0 +1,72 @@
+
+
+/* 内容 B*/
+img {
+    border:solid 1px #ddd;
+    padding:1px;
+    background-color:White;
+}
+.mb20{
+    margin:0 0 20px;
+}
+.mp {
+    width: 900px;
+    margin:12px 0 0;
+    display: inline;
+}
+.subleft{
+    width:300px;
+    float:left;
+    overflow: hidden;
+}
+.fic_slide_wrap{
+    padding:5px;
+    border:1px solid #ddd;
+    padding-top: 10px;
+    width: 600px;
+}
+.fic_slide{
+    overflow:hidden;
+}
+.fic_slide_list{
+    width: 300px;
+    height: 620px;
+    float:left;
+    overflow:hidden;
+    position:relative;
+}
+.fic_slide_list ul{
+    position:absolute;
+    left:0;
+    padding: 10px 0 0 0;
+    display: list-item;
+}
+.fic_slide_list li{
+    width: 150px;
+    height: 209px;
+    float: left;
+    text-align: center;
+}
+.fic_slide_list li img{
+    width: 125px;
+    height: 169px;
+    border: 1px solid #DDD;
+    padding: 5px;
+}
+.fic_slide_list li a {
+    text-align:center;
+    text-decoration-line:none;
+}
+/* 内容 E*/
+/* 底部 B */
+.foot {
+    height: 200px;
+    padding: 10px;
+    padding-top: 1000px;
+    background-color: #F0F0F0;
+}
+.foot .f_border {
+    height: 180px;
+    border: 1px solid #ffd283;
+}
+/* 底部 E */

@@ -1,0 +1,68 @@
+web开发
+Django框架python web框架
+前端开发的时间比后端开发的时间要长
+使用简单 创建项目后自带后台和数据库
+django大部分版本即支持python2有支持python3
+一、安装django框架：
+1.使用pip安装：pip install django==2.0
+2.使用anaconda安装：conda install django
+3.使用virtualenv安装（打开终端cmd）：
+virtualenv venv
+venv\Scripts\activate
+(venv)pip install django==2.0
+二、创建一个项目:django-admin startproject xiaoshuo(名称)
+启动服务器：python manage.py runserver 0.0.0.0:8000(0.0.0.0 让其它电脑可连接到开发服务器，8000 为端口号)
+数据迁移： python manage.py migrate
+创建管理员：python manage.py createsuperuser
+三、一个django项目至少要包含一个应用/app
+创建一个app:python manage.py startapp nove1(名称)
+目录说明：
+manage.py: 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。
+__init__.py: 一个空文件，告诉 Python 该目录是一个 Python 包。
+asgi.py: 一个 ASGI 兼容的 Web 服务器的入口，以便运行你的项目。
+settings.py: 该 Django 项目的设置/配置。
+urls.py: 该 Django 项目的 URL 声明; 一份由 Django 驱动的网站"目录"。
+wsgi.py: 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目
+python项目不需要写一句sql语句
+路由 urls.py 转发请求
+网址->路由器->访问
+请求  路由   分配给应用
+请求1  网址/1 ->应用1
+请求2  网址/2 ->应用2
+模板文件一般放在app中的templates文件夹中
+四、数据模型：
+1.创建模型（app\models.py）:
+from django.db import models
+
+# Create your models here.
+class Person(models.Model):
+    #四个字段：first_name, last_name, created_at, updated_at
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    created_at =models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+class Order(models.Model):
+    #order_id, order_desc, created_at, updated_at
+    order_id = models.CharField(max_length=30,db_index=True)
+    order_desc = models.CharField(max_length=120)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+简化：
+from django.db import models
+
+# Create your models here.
+class CreateUpdate(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    class Meta:
+        abstract=True
+
+class Person(CreateUpdate):
+    #first_name, last_name, created_at, updated_at
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+
+class Order(CreateUpdate):
+    #order_id, order_desc, created_at, updated_at
+    order_id = models.CharField(max_length=30,db_index=True)
+    order_desc = models.CharField(max_length=120)
