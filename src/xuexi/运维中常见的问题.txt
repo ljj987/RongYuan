@@ -1,0 +1,140 @@
+运维中遇到的一些问题及解决方法
+
+1.shell脚本死活不执行
+问题：某天研发某同事找我说帮他看看他写的shell脚本，死活不执行，报错。我看了下，脚本很简单，也没有常规性的错误，报“: bad interpreter: No such file or directory”错。一
+看这错，我就问他是不是在windows下编写的脚本，然后在上传到linux服务器的……果然。
+原因：在DOS/Windows里，文本文件的换行符为\r\n，而在*nix系统里则为\n，所以DOS/Windows里编辑过的文本文件到了*nix里，每一行都多了个^M。
+解决：1）重新在linux下编写脚本；2）vi :% s/\r//g  :% s/^M//g （^M输入用Ctrl+v, Ctrl+m）
+——————————————————————————————————————————
+2.crontab输出
+问题：/var/spool/clientmqueue目录占用空间超过100G
+原因：cron中执行的程序有输出内容，输出内容会以邮件形式发给cron的用户，而sendmail没有启动所以就产生了/var/spool/clientmqueue目录下的那些文件，日积月累可能撑破磁盘。
+解决：1）直接手动删除：ls |xargs rm -f  ； 2）彻底解决：在cron的自动执行语句后加上 >/dev/null 2>&1
+——————————————————————————————————————————
+3.telnet很慢
+问题：某天研发某同事说10.50访问10.52memcached服务异常，让我们检查下看网络/服务/系统是否有异常。检查发现系统正常，服务正常，10.50ping10.52也正常，但10.50telnet10.52很慢。同时发现该机器的namesever是不起作用的。
+原因：because your PC doesn’t do a reverse DNS lookup on your IP then… when you telnet/ftp into your linux box, it’ll do a dns lookup on you。
+解决：1)修改/etc/hosts使hostname和ip对应； 2）在/etc/resolv.conf注释掉nameserver或者找一个“活的”nameserver。
+——————————————————————————————————————————
+4.Read-only file system
+问题：同事在mysql里建表建不成功，提示如下：
+mysql>create table wosontest (colddname1 char(1));
+ERROR 1005 (HY000): Can’t create table ‘wosontest’ (errno: 30）
+经检查mysql用户权限以及相关目录权限没问题；用perror 30提示信息为：OS error code  30:  Read-only file system
+可能原因：1）文件系统损坏；2）磁盘又坏道；3）fstab文件配置错误，如分区格式错误错误(将ntfs写成了fat)、配置指令拼写错误等。
+解决：1）由于是测试机，重启机器后恢复；2）网上说用mount可解决。
+——————————————————————————————————————————
+5.文件删了磁盘空间没释放
+问题：某天发现某台机器df -h已用磁盘空间为90G，而du -sh /*显示所有使用空间加起来才30G，囧。
+原因：可能某人直接用rm删除某个正在写的文件，导致文件删了但磁盘空间没释放的问题
+解决：
+1）最简单重启系统或者重启相关服务。
+2）干掉进程
+/usr/sbin/lsof|grep deleted
+ora    25575 data   33u      REG              65,65  4294983680  /oradata/DATAPRE/UNDOTBS009.dbf (deleted)
+从lsof的输出中，我们可以发现pid为25575的进程持有着以文件描述号（fd）为 33打开的文件/oradata/DATAPRE/UNDOTBS009.dbf。在我们找到了这个文件之后可以通过结束进程的方式来释放被占用的空间：echo > /proc/25575/fd/33
+3）删除正在写的文件一般用 cat /dev/null > file
+——————————————————————————————————————————
+6.find文件
+问题：在tmp目录下有大量包含picture_*的临时文件，每天晚上2:30对一天前的文件进行清理。之前在crontab下跑如下脚本，但是发现脚本效率很低，每次执行时负载猛涨，影响到其他服务。
+#!/bin/sh
+find /tmp -name “picture_*” -mtime +1 -exec rm -f {} \;
+原因：目录下有大量文件，用find很耗资源。
+解决：
+#!/bin/sh
+cd /tmp
+time=`date -d “2 day ago” “+%b %d”`
+ls -l|grep “picture” |grep “$time”|awk ‘{print $NF}’|xargs rm -rf
+——————————————————————————————————————————
+7.获取不了网关mac地址
+问题：从2.14到3.65（映射地址2.141）网络不通，但是从3端的其他机器到3.65网络OK。
+原因：
+# arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+192.168.3.254            ether   incomplet             CM                    bond0
+表面现象是机器自动获取不了网关MAC地址，网络工程师说是网络设备的问题，具体不清。
+解决：arp绑定，arp -i bond0 -s 192.168.3.254 00:00:5e:00:01:64
+——————————————————————————————————————————
+8.问题：某天研发某同事说网站前端+1环境http无法启动，我上去看了下。报如下错：
+/etc/init.d/httpd start
+Starting httpd: [Sat Jan 29 17:49:00 2011] [warn] module antibot_module is already loaded, skipping
+Use proxy forward as remote ip : true.
+Antibot exclude pattern : .*\.[(js|css|jpg|gif|png)]
+Antibot seed check pattern : login
+(98)Address already in use: make_sock: could not bind to address [::]:7080
+(98)Address already in use: make_sock: could not bind to address 0.0.0.0:7080
+no listening sockets available, shutting down
+Unable to open log                                                      [FAILED]
+原因：
+1）端口被占用：表面看是7080端口被占用，于是netstat -npl|grep 7080看了下发现7080没有占用；
+2）在配置文件中重复写了端口，如果在以下两个文件同时写了Listen 7080
+/etc/httpd/conf/http.conf
+/etc/httpd/conf.d/t.10086.cn.conf
+解决：注释掉/etc/httpd/conf.d/t.10086.cn.conf的Listen 7080，重启，OK。
+——————————————————————————————————————————
+9.too many open file终极解决方案
+echo “” >> /etc/security/limits.conf
+echo “*                soft   nproc          65535″ >> /etc/security/limits.conf
+echo “*                hard   nproc          65535″ >> /etc/security/limits.conf
+echo “*                soft   nofile         65535″ >> /etc/security/limits.conf
+echo “*                hard   nofile         65535″ >> /etc/security/limits.conf
+ 
+echo “” >> /root/.bash_profile
+echo “ulimit  -n   65535″ >> /root/.bash_profile
+echo “ulimit  -u   65535″ >> /root/.bash_profile
+ 
+最后重启机器 或者执行 ulimit -u 655345 && ulimit -n 65535
+ 
+——————————————————————————————————————————
+10.ibdata1和mysql-bin
+问题：2.51磁盘空间报警，经查发现ibdata1和mysql-bin日志占用空间太多（其中ibdata1超过120G，mysql-bin超过80G）
+原因：ibdata1是存储格式，在INNODB类型数据状态下，ibdata1用来存储文件的数据和索引，而库名的文件夹里的那些表文件只是结构而已。
+innodb存储引擎有两种表空间的管理方式，分别是：
+1）共享表空间（可拆分为多个小的表空间文件），这个是我们目前多数数据库使用的方法；
+2）独立表空间，每一个表有一个独立的表空间（磁盘文件）
+对于两种管理方式，各有优劣，具体如下：
+①共享表空间：
+优点：可以将表空间分成多个文件存放到不同的磁盘上（表空间文件大小不受表大小的限制，一个表可以分布在不同步的文件上）。
+缺点：所有数据和索引存放在一个文件中，则随着数据的增加，将会有一个很大的文件，虽然可以把一个大文件分成多个小文件，但是多个表及索引在表空间中混合存储，这样如果对于一个表做了大量删除操作后表空间中将有大量空隙。对于共享表空间管理的方式下，一旦表空间被分配，就不能再回缩了。当出现临时建索引或是创建一个临时表的操作表空间扩大后，就是删除相关的表也没办法回缩那部分空间了。
+②独立表空间：在配置文件（my.cnf）中设置： innodb_file_per_table
+特点：每个表都有自已独立的表空间；每个表的数据和索引都会存在自已的表空间中。
+优点：表空间对应的磁盘空间可以被收回（Drop table操作自动回收表空间，如果对于删除大量数据后的表可以通过:alter table tbl_name engine=innodb;回缩不用的空间。
+缺点：如果单表增加过大，如超过100G，性能也会受到影响。在这种情况下，如果使用共享表空间可以把文件分开，但有同样有一个问题，如果访问的范围过大同样会访问多个文件，一样会比较慢。如果使用独立表空间，可以考虑使用分区表的方法，在一定程度上缓解问题。此外，当启用独立表空间模式时，需要合理调整innodb_open_files参数的设置。
+解决:
+1）ibdata1数据太大：只能通过dump，导出建库的sql语句，再重建的方法。
+2）mysql-bin Log太大：
+①手动删除：
+删除某个日志：mysql>PURGE MASTER LOGS TO ‘mysql-bin.010′;
+删除某天前的日志：mysql>PURGE MASTER LOGS BEFORE ’2010-12-22 13:00:00′;
+②在/etc/my.cnf里设置只保存N天的bin-log日志
+expire_logs_days = 30  //test2.banma.com ftp账户Binary Log自动删除的天数
+我把python升级到Python 2.5,由于yum包管理是用python写的,仅仅单独升级python会导致yum无法使用.
+出现这种情况的主要原因在于新安装的Python没有YUM服务所依赖的Packages。
+问题一：
+[root@TC-Boss ~]# yum
+错误信息：bash: /usr/bin/yum: /usr/bin/python: bad interpreter: 没有那个文件或目录
+我查看了下，是因为新版本的python命令装到了/usr/local/bin/目录下了，所以没有找到。具体修改方法和问题二是一样的，见下文。
+问题二：
+[root@TC-Boss ~]# yum
+错误信息：There was a problem importing one of the Python modules
+required to run yum. The error leading to this problem was:
+No module named yum
+Please install a package which provides this module, or
+verify that the module is installed correctly.
+It’s possible that the above module doesn’t match the
+current version of Python, which is:
+2.5.4 (r254:67916, Feb 24 2010, 10:03:49)
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-44)]
+If you cannot solve this problem yourself, please go to
+the yum faq at:
+http://wiki.linux.duke.edu/YumFaq
+解决方法:
+查找yum文件,并编辑此py文件
+[root@TC-Boss ~]# which yum
+/usr/bin/yum
+[root@TC-Boss ~]# vi /usr/bin/yum
+将
+#!/usr/bin/python
+改为:
+#!/usr/bin/python2.4
+然后保存OK.

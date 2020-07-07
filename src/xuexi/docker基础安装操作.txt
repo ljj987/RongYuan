@@ -1,0 +1,19 @@
+﻿##安装docker-ce版本流程：
+mount /dev/sr0 /media/cdrom/
+yum -y install yum-utils device-mapper-persistent-data lvm2
+curl https://download.docker.com/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker-ce.repo
+yum -y install docker-ce
+systemctl start docker
+systemctl enable docker
+docker version
+
+##添加国内镜像源
+echo -e "{\n\t\"registry-mirrors\":[ \"https://registry.docker-cn.com\" ]\n}" > /etc/docker/daemon.json
+systemctl daemon-reload
+systemctl restart docker
+
+
+
+
+
+

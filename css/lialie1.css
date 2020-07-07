@@ -2,13 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
   
-body {
-    font-family: Arial;
-    margin: 0;
-    padding: 5px;
-    background: #f1f1f1;
+body,
+html {
+    width: 1350px;
+    height: 650px;
+    font: 20px/40px "microsoft yahei";
+    color: white;
+    background: #f0f0f0;
 }
   /* 头部样式 */
 .header {
@@ -20,6 +24,9 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
+    top: 0;
+    left: 0;
+    width: 1360px;
 }
   
   /* 导航链接 */
@@ -37,29 +44,71 @@ body {
     background-color: #ddd;
     color: black;
 }
-.footer {
-    padding: 10px;
-    text-align: center;
-    background: #f0f0f0;
-    margin-top: 5px;
+#container {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
 }
-.column {
+
+#main {
+    height: 100%;
+}
+.footer {
+    height: 8%;
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px;
+}
+#center,
+#left,
+#right {
+    height: 100%;
     float: left;
 }
-   
-/* 左右侧栏的宽度 */
-.column.side {
-    width: 25%;
+
+#center {
+    width: 100%;
+    background: #E0CDA2;
 }
-   
-/* 中间列宽度 */
-.column.middle {
-    width: 75%;
+
+#right {
+    background: #E0CDA2;
+    width: 20%;
+    margin-left: -20%;
 }
-   
+
+#left {
+    background: #E0CDA2;
+    width: 20%;
+    margin-left: -100%;
+}
+
+#main-inner {
+    padding-left: 20%; 
+}
+#left img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px 8px 0px 0px;
+    margin: 6px 23px;
+}
+#left h2 {
+    background: rgb(120, 243, 120);
+    text-align: center;
+    margin: -19px 27px 5px 23px;
+    font-size: 1em;
+    
+}
+#main ul {
+    text-align: left;
+    font-size: 0.8em;
+    margin: 10px 45px;
+}
 /* 响应式布局 - 宽度小于600px时设置上下布局 */
 @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
+    #container, #left, #center, #right, .footer {
       width: 100%;
     }
 }
+
+

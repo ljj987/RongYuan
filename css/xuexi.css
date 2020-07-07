@@ -1,0 +1,45 @@
+div {
+    display: block;
+}
+.md {
+    width: 91%;
+    background: #E4D2AC;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 4px 49px;
+}
+.bookLink a{
+    display:block;
+    overflow:hidden;
+    color:#999;
+    font-size:  18px;
+    padding-right:33px;
+    margin-bottom:25px;
+}
+em {
+    font-style:normal;
+    font-style: italic;
+}
+.md .oneLine a em {
+    color: #999; 
+}
+.md .oneLine a {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 18px!important;
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+}
+.footer {
+    height: 8%;
+    margin-top: 5px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+@media screen and (max-width: 600px) {
+    .md {
+      width: 100%;
+    }
+  }

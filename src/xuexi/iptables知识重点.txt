@@ -1,0 +1,50 @@
+1.防火墙iptables的类型：
+  堡垒型防火墙：就是给单台主机设置的防护策略
+  网关型防火墙：就是架设在网关层面，以起到保护内网服务器的作用
+2.种类上划分有硬件和软件之分
+  硬件：思科的ASA防火墙，H3C的Sepath防火墙
+  软件：iptables、firewalld
+3.工作的层级：传输层（四层防护）
+4.iptables口诀：四表五链
+  四表：
+  raw表：确定是否对该数据包进行状态跟踪（prerouting、output）
+  mangle表：为数据包设置标记（所有链）
+  nat表：修改数据包中的源、目标IP地址或端口（prerouting、postrouting、output）
+  filter表：确定是否被放行该数据包（过滤）（input、output、forward）
+  五链：
+  INPUT：处理入站数据包
+  OUTPUT：处理出站数据包
+  FORWARD：处理转发数据包
+  POSTROUTING：在进行路由选择后处理数据包
+  PREROUTING：在进行路由选择前处理数据包
+5.规则表之间的顺序：
+  raw→mangle→nat→filter
+****************************************  
+6.规则链之间的顺序：
+  入站：PREROUTING→INPUT
+  出站：OUTPUT→POSTROUTING
+  转发：PREROUTING→FORWARD→POSTROUTING
+****************************************  
+7.对于数据包的控制（动作）类型
+  ACCEPT：允许通过 
+  DROP：直接丢弃，不给出任何回应
+  REJECT：拒绝通过，必要时会给出提示
+  LOG：记录日志信息，然后传给下一条规则继续匹配
+8.相关命令操作
+[root@iptables ~]# iptables -F （清空所有规则）
+[root@iptables ~]# iptables -L （查看规则）
+9.公司案例：
+  当排查出服务器已经遭受木马攻击，或者外网入侵，我们可以执行一种脚本，目的就是让
+  该服务器所有的网线接口封闭隔离，脚本设计思路如下：
+  1）.利用awk命令讲所有接口的网卡名称过滤出来
+  2）.讲这些网卡名称加入到循环列表
+  3）.走循环语句，执行iptables中的接口匹配策略
+	  命令样例如下：
+	  iptables -I INPUT -i eth0 -j DROP
+	  iptables -I OUTPUT -o eth0 -j DROP
+  
+  
+  
+  
+  
+  
