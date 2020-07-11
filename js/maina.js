@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-06 16:34:12
- * @LastEditTime: 2020-07-07 13:37:26
+ * @LastEditTime: 2020-07-11 18:04:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \RongYuan\js\maina.js
@@ -32,7 +32,6 @@ var myChart = echarts.init(document.getElementById('maina'));
                     { name: '编程基础', max: 100},
                     { name: '运维基础', max: 100},
                     { name: 'python基础', max: 100},
-                    { name: 'android基础', max: 100},
                     { name: '项目开发能力', max: 100}
                 ]
             },
@@ -42,7 +41,7 @@ var myChart = echarts.init(document.getElementById('maina'));
                 // areaStyle: {normal: {}},
                 data: [
                     {
-                        value: [85, 70, 80, 60, 50, 75],
+                        value: [85, 70, 80, 60, 75],
                         name: '能力雷达'
                     },
                 ]
