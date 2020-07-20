@@ -44,7 +44,10 @@ body {
     background: #f0f0f0;
     margin-top: 5px;
 }
-   
+.footer span{
+    color: #9c9a9a;
+    font-size: 16px;
+} 
   /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
 @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {   

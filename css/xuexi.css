@@ -8,6 +8,23 @@ div {
     overflow: hidden;
     white-space: nowrap;
     margin: 4px 49px;
+    position: absolute;
+}
+.md01 {
+    margin: 0 220px;
+    position: absolute;
+}
+.md02 {
+    margin: 0 440px;
+    position: absolute;
+}
+.md03 {
+    margin: 0 660px;
+    position: absolute;
+}
+.md04 {
+    margin: 0 880px;
+    position: absolute;
 }
 .bookLink a{
     display:block;
@@ -16,10 +33,10 @@ div {
     font-size:  18px;
     padding-right:33px;
     margin-bottom:25px;
+    margin: 0 60px;
 }
-em {
-    font-style:normal;
-    font-style: italic;
+.em{    
+    font-style: normal;
 }
 .md .oneLine a em {
     color: #999; 
@@ -29,7 +46,6 @@ em {
     color: #000;
     margin-bottom: 18px!important;
     text-decoration-line: none;
-    -moz-text-decoration-line: none;
 }
 .footer {
     height: 8%;
@@ -37,6 +53,10 @@ em {
     text-align: center;
     padding: 10px;
     color: #fff;
+}
+.footer span{
+    color: #9c9a9a;
+    font-size: 16px;
 }
 @media screen and (max-width: 600px) {
     .md {
